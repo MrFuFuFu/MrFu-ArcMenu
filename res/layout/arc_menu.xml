@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-90dp" >
+
+        <RelativeLayout
+            android:id="@+id/panel_arcmenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#7f000000"
+            android:visibility="invisible" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" >
+
+            <com.mrfu.arcmenu.view.ArcLayout
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/item_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                custom:childSize="44px"
+                custom:fromDegrees="270.0"
+                custom:toDegrees="360.0" /> <!-- 后面三个属性在clockactivity中配置的 -->
+
+            <FrameLayout
+                android:id="@+id/control_layout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/composer_button" >
+
+                <ImageView
+                    android:id="@+id/control_hint"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/composer_icn_plus" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_createring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/composer_createring"
+                android:textColor="@color/color_white"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_customring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/composer_customring"
+                android:textColor="@color/color_white"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</merge>
